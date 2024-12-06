@@ -12,6 +12,7 @@ from PIL import Image
 import time
 
 app = Flask(__name__)
+
 UPLOAD_FOLDER = "uploads"
 OUTPUT_FOLDER = "outputs"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -213,7 +214,7 @@ def decrypt_message(encrypted_message, password, salt):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    #port = int(os.environ.get("PORT", 5000))
+    #app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
     # Ejecuta en 0.0.0.0 para que Render pueda acceder
-    #app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port)
