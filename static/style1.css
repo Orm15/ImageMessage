@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.b{
+    display: flex;
+    flex-direction: column; /* Hace que los elementos se apilen en columna */
+    align-items: flex-start; /* Alinea los elementos al inicio de la columna (opcional) */
+    gap: 10px;
+}
+
+form {
+    padding: 20px; /* Espacio entre el borde del formulario y los elementos */
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%; /* Asegura que los elementos ocupen todo el ancho disponible */
+    padding: 10px; /* Espacio dentro de los elementos */
+    margin-bottom: 10px; /* Espacio entre los elementos */
+    border: 1px solid #ccc; /* Borde de los elementos */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+input[type="file"] {
+    padding: 5px; /* Un poco menos de padding para los campos de archivo */
+}
+h1 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Centrar el botón "Volver" */
+form[action="{{ url_for('index') }}"] {
+    text-align: center; /* Centra el contenido dentro del formulario */
+    margin-top: 20px; /* Espaciado para separarlo del formulario principal */
+}
+
+form[action="{{ url_for('index') }}"] button {
+    padding: 10px 20px; /* Mejora la apariencia del botón */
+    background-color: #007BFF; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+form[action="{{ url_for('index') }}"] button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+
+button:hover {
+    background-color: #218838;
+}
+
+#response {
+    margin-top: 20px;
+    font-weight: bold;
+}
